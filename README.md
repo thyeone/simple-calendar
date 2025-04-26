@@ -1,1 +1,1 @@
-# react-kit
+# simple-calendar
