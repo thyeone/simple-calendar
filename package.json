@@ -7,10 +7,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "icon": "tsx src/generate-icons.ts",
+    "icon:current": "tsx src/generate-icons.ts --current-color"
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.1.2",
+    "@radix-ui/react-scroll-area": "^1.2.6",
     "@radix-ui/react-slot": "^1.1.1",
     "@suspensive/react": "^3.0.0",
     "@tanstack/react-query": "^5.69.0",
@@ -35,6 +38,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
     "@tailwindcss/vite": "^4.1.4",
     "@tanstack/router-plugin": "^1.114.25",
     "@types/node": "^22.15.2",
@@ -42,6 +48,7 @@
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "commander": "^13.1.0",
     "eslint": "^9.20.1",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",

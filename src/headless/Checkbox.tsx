@@ -1,7 +1,7 @@
-import { cn } from '@/utils/cn';
+import { cn } from '@/libs/cn';
 import { useId } from 'react';
-import { Flex } from './ui/Flex';
-import { Icon } from './Icon';
+import { Flex } from '@/headless/ui/Flex';
+import { Icon } from '@/headless/icon/Icon';
 
 type CheckBoxProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label: string;
@@ -28,9 +28,9 @@ export function CheckBox({
       />
       <label htmlFor={id} className="cursor-pointer">
         {checked ? (
-          <Icon name="CheckboxIcon" size={24} className="text-brand-500" />
+          <Icon name="Calendar" size={24} className="text-brand-500" />
         ) : (
-          <Icon name="UncheckboxIcon" size={24} className="text-gray-300" />
+          <Icon name="Calendar" size={24} className="text-gray-300" />
         )}
       </label>
 

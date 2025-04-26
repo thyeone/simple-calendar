@@ -1,4 +1,4 @@
-import { cn } from '@/utils/cn';
+import { cn } from '@/libs/cn';
 import { type VariantProps, cva } from 'class-variance-authority';
 import {
   type ComponentPropsWithoutRef,

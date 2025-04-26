@@ -1,12 +1,12 @@
 'use client';
 
-import { cn } from '../libs/cn';
+import { cn } from '@/libs/cn';
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
-import { Flex } from './Flex';
-import { Icon } from './Icon';
-import { Portal } from './overlay/Portal';
-import { useScrollLock } from '../hooks/useScrollLock';
+import { Flex } from '@/headless/ui/Flex';
+import { Icon } from '@/headless/icon/Icon';
+import { Portal } from '@/headless/overlay/Portal';
+import { useScrollLock } from '@/hooks/useScrollLock';
 
 type SelectBoxProps<T> = Omit<
   React.ComponentPropsWithoutRef<'button'>,
@@ -120,11 +120,11 @@ export default function SelectBox<
               <span className="text-body-2">{render(value)}</span>
             )
           ) : (
-            <span className="text-body-2">{t(placeholder)}</span>
+            <span className="text-body-2">{placeholder}</span>
           )}
         </Flex>
         <div className="ml-auto">
-          <Icon name="ArrowDropDownFill" size={18} />
+          <Icon name="Calendar" size={18} />
         </div>
       </Flex>
       <Portal>
@@ -165,7 +165,7 @@ export default function SelectBox<
                 <span>{renderMenu ? renderMenu(menuItem) : menuItem}</span>
                 {value === menuItem && (
                   <Icon
-                    name="CheckLine"
+                    name="Calendar"
                     size={18}
                     className="text-state-blue-600"
                   />

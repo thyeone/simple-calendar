@@ -1,7 +1,7 @@
-import { cn } from '@/utils/cn';
+import { cn } from '@/libs/cn';
 import { useId } from 'react';
 import { Flex } from './ui/Flex';
-import { Icon } from './Icon';
+import { Icon } from './icon/Icon';
 
 type CheckBoxProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label: string;
@@ -33,10 +33,10 @@ export function Radio({
         })}
       >
         {checked ? (
-          <Icon name="CheckedRadio" size={24} className="text-brand-500" />
+          <Icon name="Calendar" size={24} className="text-brand-500" />
         ) : (
           <Icon
-            name="UncheckedRadio"
+            name="Calendar"
             size={24}
             className={cn('text-gray-300', {
               'text-gray-100': rest.disabled,

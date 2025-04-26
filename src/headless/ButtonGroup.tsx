@@ -5,9 +5,9 @@ import {
   ReactNode,
   cloneElement,
   isValidElement,
-} from "react";
-import { cn } from "../libs/cn";
-import { Spacing } from "./Spacing";
+} from 'react';
+import { cn } from '@/libs/cn';
+import { Spacing } from '@/headless/ui/Spacing';
 
 type ButtonGroupProps = {
   isSpacing?: boolean;
@@ -43,7 +43,7 @@ const renderButtonElements = (
   elements: ReactElement[],
   isPadding: boolean,
   isBackground: boolean,
-  isShadow: boolean
+  isShadow: boolean,
 ) => {
   const flatElements = elements.flatMap((child: ReactNode) => {
     if (isValidElement(child) && child.type === Fragment) {
@@ -57,11 +57,11 @@ const renderButtonElements = (
     return (
       <div
         className={cn(
-          "fixed inset-x-0 bottom-0 z-50 mx-auto max-w-mobile bg-white pb-20 pt-10",
+          'fixed inset-x-0 bottom-0 z-50 mx-auto max-w-mobile bg-white pb-20 pt-10',
           {
-            "px-16": isPadding,
-            "shadow-[0_-2px_14px_0_#F1F1F1C9]": isShadow,
-          }
+            'px-16': isPadding,
+            'shadow-[0_-2px_14px_0_#F1F1F1C9]': isShadow,
+          },
         )}
       >
         {elements[0]}
@@ -71,8 +71,8 @@ const renderButtonElements = (
   const buttonElements = Children.map(flatElements, (child, index) => {
     return cloneElement(child as ReactElement, {
       className: cn({
-        "flex-[1_1_120px]": index === 0,
-        "flex-[2_1_230px]": index === 1,
+        'flex-[1_1_120px]': index === 0,
+        'flex-[2_1_230px]': index === 1,
       }),
     });
   });
@@ -80,12 +80,12 @@ const renderButtonElements = (
   return (
     <div
       className={cn(
-        "fixed inset-x-0 bottom-0 z-50 mx-auto flex max-w-mobile items-center gap-8 pb-20 pt-10",
+        'fixed inset-x-0 bottom-0 z-50 mx-auto flex max-w-mobile items-center gap-8 pb-20 pt-10',
         {
-          "px-16": isPadding,
-          "bg-white": isBackground,
-          "shadow-[0_-2px_14px_0_#F1F1F1C9]": isShadow,
-        }
+          'px-16': isPadding,
+          'bg-white': isBackground,
+          'shadow-[0_-2px_14px_0_#F1F1F1C9]': isShadow,
+        },
       )}
     >
       {buttonElements}
