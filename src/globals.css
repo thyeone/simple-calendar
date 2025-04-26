@@ -1,0 +1,94 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+@import 'tailwindcss';
+
+body {
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type='date'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type='date']::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+@theme {
+  --spacing: 1px;
+
+  --breakpoint-*: initial;
+  --breakpoint-base: 1200px;
+  --breakpoint-mobile: 450px;
+
+  --max-width-base: 1200px;
+  --max-width-mobile: 450px;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-red: #f62a2a;
+  --color-blue-50: #eef7ff;
+  --color-blue: #2787fe;
+  --color-green-50: #e1f4eb;
+  --color-green-500: #0d884f;
+  --color-brand-50: #e6f8f7;
+  --color-brand-100: #b1eae5;
+  --color-brand-500: #00baac;
+  --color-brand-600: #04a99d;
+  --color-brand-700: #03847a;
+  --color-brand-900: #024e48;
+  --color-grey-50: #f4f5f8;
+  --color-grey-100: #dedee4;
+  --color-grey-200: #a9aab4;
+  --color-grey-300: #818491;
+  --color-grey-400: #696c7c;
+  --color-grey-500: #43475b;
+  --color-grey-600: #3d4153;
+  --color-grey-700: #303241;
+  --color-grey-800: #252732;
+  --color-grey-900: #1c1e26;
+
+  --z-index-modal: 1000;
+  --z-index-header: 999;
+}
